@@ -51,6 +51,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonReset.setOnClickListener(){
+            editTextWeight.setText("")
+            editTextHeight.setText("")
+
             textViewBMI.text = ""
             textViewStatus.text = ""
             imageViewBMI.setImageResource(R.drawable.empty)
