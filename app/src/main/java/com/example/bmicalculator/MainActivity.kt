@@ -1,5 +1,7 @@
 package com.example.bmicalculator
 
+import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -51,12 +53,21 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonReset.setOnClickListener(){
-            editTextWeight.setText("")
+            editTextWeight.text.clear()
             editTextHeight.setText("")
 
             textViewBMI.text = ""
             textViewStatus.text = ""
             imageViewBMI.setImageResource(R.drawable.empty)
+
+            editTextWeight.requestFocus()
+        }
+
+        val imageViewInfo = findViewById<ImageView>(R.id.imageViewInfo)
+        imageViewInfo.setOnClickListener{
+            //Explicit Intent
+            val intent = Intent(this, InfoActivity::class.java)
+            startActivity(intent)
         }
     }
 }

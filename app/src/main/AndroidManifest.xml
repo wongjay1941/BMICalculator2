@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BMICalculator">
         <activity
+            android:name=".InfoActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/info"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
